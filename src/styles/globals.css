@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body-height {
+  min-height: calc(100vh - 120px);
+}
+
+/* Customize scrollbar for main area */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 4px; /* Rounding the edges of the scrollbar handle */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: red; /* Handle color on hover */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #333; /* Background color of the scrollbar track */
+}
+
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+.water-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: black;
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+
+/* Water fill effect */
+.water-fill {
+  position: absolute;
+  width: 100%;
+  height: 70%; /* Adjust to control water height */
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #0077be, #001f3f);
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+}
+
+/* Adding wave reflections */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), transparent 70%);
+  opacity: 0.5;
+  transform: rotate(0deg);
+  animation: waveAnimation 6s infinite linear;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 3s;
+  opacity: 0.4;
+}
+
+/* Light reflection at the top */
+.light-reflection {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0.5;
+}
+
+/* Wave animation */
+@keyframes waveAnimation {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(-50%) rotate(360deg); }
+}
