@@ -2,24 +2,25 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import style from '@/components/header/header.module.scss'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-blue-500 text-white shadow-lg fixed top-0 w-full z-50 container-shadow">
+    <header className = {`bg-black text-white shadow-lg fixed top-0 w-full z-50 ${style.container_shadow}`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold">
-          <Link href="/">MyLogo</Link>
+        <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent">
+          <Link href="/" >Shrilatha</Link>
         </div>
 
         {/* Menu items */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/about">About</Link>
-          <Link href="/education">Education</Link>
-          <Link href="/experience">Experience</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" className="relative text-white hover:text-orange-500 transition duration-300 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300">About</Link>
+          <Link href="/skills" className="relative text-white hover:text-orange-500 transition duration-300 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300">Skills</Link>
+          <Link href="/projects" className="relative text-white hover:text-orange-500 transition duration-300 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300">Projects</Link>
+          <Link href="/contact"className="relative text-white hover:text-orange-500 transition duration-300 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300">Contact</Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -46,11 +47,11 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-blue-600">
+        <div className="md:hidden bg-black">
           <nav className="flex flex-col items-center py-2 space-y-2">
-            <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="/education" onClick={() => setIsOpen(false)}>Education</Link>
-            <Link href="/experience" onClick={() => setIsOpen(false)}>Experience</Link>
+            <Link href="/" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/skills" onClick={() => setIsOpen(false)}>Skills</Link>
+            <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </nav>
         </div>
