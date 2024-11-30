@@ -20,7 +20,7 @@ const Home = () => {
         <div className={`bg-[#121212] mx-auto px-4 overflow-y-auto body-height mt-16 custom-scrollbar py-4 w-full flex items-center gap-5 justify-center`}>
                 <div>
                     <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold">Hello,
-                        <br /> I'm Shrilatha</h1>
+                        <br /> I'm a devleloper</h1>
                     <p className="text-[#ADB7BE] text-lg lg:text-xl">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Maecenas sit amet nisi efficitur, malesuada lectus ac, venenatis lacus.
