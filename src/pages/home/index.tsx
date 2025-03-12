@@ -2,6 +2,7 @@
 import React from "react";
 import style from '@/pages/home/home.module.scss'
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 
 const Home = () => {
     const router = useRouter()
@@ -17,6 +18,13 @@ const Home = () => {
     };
 
     return (
+        <>
+        <Head>
+        <title>Shrilatha | Home</title>
+        <meta name="description" content="Mahesh Paul's Website Portfolio, About Page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
         <div className={`bg-[#121212] mx-auto px-4 overflow-y-auto body-height mt-16 custom-scrollbar py-4 w-full flex items-center gap-5 justify-center`}>
                 <div>
                     <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold">Hello,
@@ -41,6 +49,7 @@ const Home = () => {
                 <img src="images/coder-women.png" alt="code-women" className="rounded-xl" />
             </div>
         </div>
+        </>
     )
 }
 
