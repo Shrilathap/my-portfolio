@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import style from '@/pages/home/home.module.scss'
+import style from '@/pages/home/home.module.css'
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 

@@ -1,8 +1,8 @@
-import style from './contact.module.scss'
+import style from './contact.module.css'
 const Contact = () => {
     return (
         <div className={`bg-cover bg-center mx-auto px-4 overflow-y-auto body-height mt-16 custom-scrollbar py-4 w-full flex items-center gap-5 justify-center ${style.bg_custom}`}>
-            <div className='absolute backdrop-blur bg-white/30 p-9 min-w-[450px]'>
+            <div className='absolute backdrop-blur bg-white/30 p-9 sm:min-w-[450px] min-w-fit'>
                 <h2 className='text-2xl font-semibold text-gray-800 mb-4 text-center'>Get in touch</h2>
                 <form>
                     <div>

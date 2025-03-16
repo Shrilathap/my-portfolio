@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import style from '@/components/header/header.module.scss'
+import style from '@/components/header/header.module.css'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
