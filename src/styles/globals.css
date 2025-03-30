@@ -22,31 +22,28 @@ body {
 }
 
 .body-height {
-  min-height: calc(100vh - 120px);
+  height: calc(100vh - 120px);
   overflow-x: hidden;
-  @media (max-width:992px) {
-    flex-wrap: wrap;
-  max-height: calc(100vh - 120px);
-
-  }
+  overflow-y: auto;
 }
 
-/* Customize scrollbar for main area */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color of the scrollbar handle */
-  border-radius: 4px; /* Rounding the edges of the scrollbar handle */
+::-webkit-scrollbar-thumb  {
+  background-color: #888;
+  border-radius: 4px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: red; /* Handle color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #333; /* Background color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #333;
 }
+
 
 
