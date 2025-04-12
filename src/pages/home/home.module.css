@@ -45,3 +45,45 @@
         transform: translateX(-50%)
     }
 }
+
+.animation {
+    animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+    position: relative;
+    white-space: nowrap;
+}
+
+@keyframes type {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes cursor {
+    50% {
+      border-color: #fff;
+    }
+  }
+
+  .text {
+    width: 29ch;
+    border-right: 3px solid;
+    animation: blink 1s step-end infinite, type 2.5s steps(29) forwards;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+  }

@@ -21,14 +21,14 @@ const Home = () => {
         <>
         <Head>
         <title>Shrilatha | Home</title>
-        <meta name="description" content="Mahesh Paul's Website Portfolio, About Page" />
+        <meta name="description" content="Shrilatha's Website Portfolio, About Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className={`bg-[#121212] mx-auto px-4  custom-scrollbar py-4 w-full h-full flex flex-wrap sm:flex-nowrap items-center gap-5 justify-center`}>
                 <div>
                     <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold">Hello,
-                        <br /> I'm a devleloper</h1>
+                        <br /> Im a devleloper</h1>
                     <p className="text-[#ADB7BE] text-lg lg:text-xl">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Maecenas sit amet nisi efficitur, malesuada lectus ac, venenatis lacus.

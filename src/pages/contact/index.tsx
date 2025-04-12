@@ -10,11 +10,11 @@ const Contact = () => {
         message: "",
       });
 
-    const handleChange = (e:any) => {
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
 
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         setStatus("Sending...");
     
